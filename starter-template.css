@@ -1,18 +1,177 @@
+/* ============================================
+   TGRI — Teenage Mutant Ninja Turtle Theme
+   The ooze that powers your business.
+   ============================================ */
+
+:root {
+  --ooze-green: #4af04a;
+  --ooze-dark: #1a3a1a;
+  --shell-dark: #0d1f0d;
+  --sewer-bg: #111711;
+  --sewer-mid: #1c2b1c;
+  --pizza-orange: #f97316;
+  --purple-foot: #7c3aed;
+  --text-light: #d4f5d4;
+  --text-muted-green: #7db87d;
+}
+
+/* Base */
+body {
+  background-color: var(--sewer-bg);
+  color: var(--text-light);
+  font-family: 'Oswald', sans-serif;
+  background-image:
+    radial-gradient(ellipse at top left, #0d2b0d 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, #0a1f1a 0%, transparent 60%);
+  min-height: 100vh;
+}
+
+/* Sewer pipe accent at top */
+.sewer-pipe-top {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ooze-green) 0px,
+    var(--ooze-green) 40px,
+    #2a5a2a 40px,
+    #2a5a2a 80px
+  );
+  box-shadow: 0 0 12px var(--ooze-green);
+}
+
+/* Header */
+.tgri-border {
+  border-color: #2d5a2d !important;
+}
+
+.tgri-logo {
+  filter: drop-shadow(0 0 8px var(--ooze-green));
+  max-height: 80px;
+  width: auto;
+}
+
+.tgri-title {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--ooze-green);
+  text-shadow: 2px 2px 0 #000, 0 0 20px rgba(74, 240, 74, 0.4);
+  line-height: 1.1;
+}
+
+.tgri-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted-green);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Main Heading */
+.tgri-heading {
+  font-family: 'Bangers', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.06em;
+  color: var(--ooze-green);
+  text-shadow: 3px 3px 0 #000, 0 0 30px rgba(74, 240, 74, 0.3);
+}
+
+/* Section Headings */
+.tgri-section-heading {
+  font-family: 'Bangers', cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.05em;
+  color: var(--pizza-orange);
+  text-shadow: 2px 2px 0 #000, 0 0 16px rgba(249, 115, 22, 0.35);
+  margin-bottom: 0.75rem;
+}
+
+/* Body text */
+.tgri-body {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.tgri-btn {
+  background-color: var(--ooze-green);
+  color: #000;
+  border: none;
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-shadow: none;
+  box-shadow: 0 0 16px rgba(74, 240, 74, 0.5), 3px 3px 0 #000;
+  transition: all 0.2s ease;
+}
+
+.tgri-btn:hover,
+.tgri-btn:focus {
+  background-color: #6fff6f;
+  color: #000;
+  box-shadow: 0 0 28px rgba(74, 240, 74, 0.8), 3px 3px 0 #000;
+  transform: translateY(-2px);
+}
+
+.tgri-response {
+  font-size: 0.85rem;
+  color: var(--text-muted-green);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Divider */
+.tgri-divider {
+  height: 3px;
+  width: 120px;
+  background: linear-gradient(90deg, var(--ooze-green), transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--ooze-green);
+}
+
+/* Icon list */
 .icon-list {
   padding-left: 0;
   list-style: none;
 }
+
 .icon-list li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: .25rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-light);
+  font-size: 1rem;
 }
+
 .icon-list li::before {
   display: block;
   flex-shrink: 0;
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: .5rem;
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.6rem;
+  margin-top: 0.1em;
   content: "";
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234af04a' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3E%3C/svg%3E") no-repeat center center / 100% auto;
+}
+
+/* Footer */
+.tgri-footer {
+  color: var(--text-muted-green);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .tgri-heading {
+    font-size: 2.5rem;
+  }
+  .tgri-title {
+    font-size: 1.3rem;
+  }
 }
